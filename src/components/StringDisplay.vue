@@ -71,14 +71,15 @@ function handleStop() {
 <style scoped>
 .strings-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 15px;
 }
 
 .string-control {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 30px;
   background: rgba(255,255,255,0.1);
   padding: 15px;
   border-radius: 12px;
@@ -87,13 +88,12 @@ function handleStop() {
 
 .string-control:hover {
   background: rgba(255,255,255,0.15);
-  transform: translateX(5px);
 }
 
 .string-number {
   font-size: 1.5em;
   font-weight: bold;
-  min-width: 40px;
+  min-width: 50px;
   text-align: center;
   background: rgba(255,255,255,0.2);
   padding: 8px;
@@ -102,7 +102,7 @@ function handleStop() {
 
 .note-selector {
   flex: 1;
-  padding: 12px;
+  padding: 10px 5px;
   background: rgba(255,255,255,0.2);
   border: 2px solid rgba(255,255,255,0.3);
   border-radius: 8px;
@@ -134,7 +134,6 @@ function handleStop() {
 
 .play-button:hover {
   background: rgba(76, 175, 80, 0.9);
-  transform: scale(1.1);
 }
 
 .play-button:active {

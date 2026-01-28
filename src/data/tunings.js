@@ -63,6 +63,12 @@ export const STANDARD_TUNINGS = {
   'pure-tone': {
     '6-string': {
       'standard': ['E2', 'A2', 'D3', 'G3', 'B3', 'E4']
+    },
+    '7-string': {
+      'standard': ['B1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4']
+    },
+    '8-string': {
+      'standard': ['F#1', 'B1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4']
     }
   }
 }

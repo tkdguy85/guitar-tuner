@@ -9,7 +9,7 @@
         :class="{ active: selected === instrument.value }"
         @click="$emit('update', instrument.value)"
       >
-        {{ instrument.icon }} {{ instrument.label }}
+        {{ instrument.label }}
       </button>
     </div>
   </div>
@@ -26,10 +26,10 @@
   defineEmits(['update'])
 
   const instruments = [
-    { value: 'bass', label: 'Bass', icon: '🎸' },
-    { value: 'electric-guitar', label: 'Electric Guitar', icon: '⚡' },
-    { value: 'acoustic-guitar', label: 'Acoustic Guitar', icon: '🎵' },
-    { value: 'pure-tone', label: 'Pure Tones', icon: '〰️' }
+    { value: 'bass', label: 'Bass'},
+    { value: 'electric-guitar', label: 'Electric Guitar'},
+    { value: 'acoustic-guitar', label: 'Acoustic Guitar'},
+    { value: 'pure-tone', label: 'Pure Tones'}
   ]
 </script>
 

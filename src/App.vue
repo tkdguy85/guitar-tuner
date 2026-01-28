@@ -43,10 +43,6 @@
       </section>
     </main>
 
-    <footer>
-      <p>Works offline • All devices supported</p>
-    </footer>
-
     <SaveTuningModal
       v-if="showSaveModal"
       :instrument="currentInstrument"
