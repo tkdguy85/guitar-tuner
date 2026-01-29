@@ -196,7 +196,7 @@ export function useAudio() {
         }
         currentSource.value.stop(audioContext.currentTime + 0.1)
       } catch (e) {
-        // Source already stopped
+        console.error('Error stopping audio source:', e)
       }
       currentSource.value = null
       gainNode.value = null

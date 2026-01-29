@@ -29,7 +29,7 @@ export const STANDARD_TUNINGS = {
       'drop-b': ['B1', 'F#2', 'B2', 'E3', 'G#3', 'C#4'],
       'open-g': ['D2', 'G2', 'D3', 'G3', 'B3', 'D4'],
       'open-d': ['D2', 'A2', 'D3', 'F#3', 'A3', 'D4'],
-      'dadgad': ['D2', 'A2', 'D3', 'G3', 'A3', 'D4'],
+      'DADGAD': ['D2', 'A2', 'D3', 'G3', 'A3', 'D4'],
       'open-c': ['C2', 'G2', 'C3', 'G3', 'C4', 'E4']
     },
     '7-string': {
@@ -49,7 +49,7 @@ export const STANDARD_TUNINGS = {
       'half-step-down': ['Eb2', 'Ab2', 'Db3', 'Gb3', 'Bb3', 'Eb4'],
       'open-d': ['D2', 'A2', 'D3', 'F#3', 'A3', 'D4'],
       'open-g': ['D2', 'G2', 'D3', 'G3', 'B3', 'D4'],
-      'dadgad': ['D2', 'A2', 'D3', 'G3', 'A3', 'D4'],
+      'DADGAD': ['D2', 'A2', 'D3', 'G3', 'A3', 'D4'],
       'open-c': ['C2', 'G2', 'C3', 'G3', 'C4', 'E4'],
       'open-e': ['E2', 'B2', 'E3', 'G#3', 'B3', 'E4']
     },
