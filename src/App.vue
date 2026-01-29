@@ -36,6 +36,7 @@
           :strings="currentStrings"
           :playback-mode="playbackMode"
           :instrument="currentInstrument"
+          :playing-string="playingString"
           @update-string="updateString"
           @play="handlePlay"
           @stop="handleStop"
@@ -71,6 +72,7 @@ const currentTuning = ref('standard')
 const playbackMode = ref('repeat')
 const showSaveModal = ref(false)
 const currentStrings = ref(['E2', 'A2', 'D3', 'G3', 'B3', 'E4'])
+const playingString = ref(null)
 
 const { customTunings, saveCustomTuning: saveToStorage, deleteCustomTuning: deleteFromStorage } = useStorage()
 const { playNote, stopNote } = useAudio()
@@ -143,12 +145,25 @@ function deleteCustomTuning(tuningId) {
 }
 
 function handlePlay(index) {
+  if (playbackMode.value === 'continuous' && playingString.value !== null && playingString.value !== index) {
+    stopNote()
+  }
+  
   const note = currentStrings.value[index]
   playNote(note, currentInstrument.value, playbackMode.value)
+  playingString.value = index
 }
 
-function handleStop() {
+function handleStop(index) {
   stopNote()
+  if (playingString.value === index) {
+    playingString.value = null
+  }
+}
+
+function handleStopAll() {
+  stopNote()
+  playingString.value = null
 }
 
 watch([currentInstrument, currentStringCount], () => {

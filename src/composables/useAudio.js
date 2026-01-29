@@ -177,7 +177,7 @@ export function useAudio() {
 
     if (playbackMode === 'repeat') {
       playOnce(note, instrument)
-      repeatInterval.value = setInterval(() => playOnce(note, instrument), 3000)
+      repeatInterval.value = setInterval(() => playOnce(note, instrument), 3500)
     } else {
       playContinuous(note, instrument)
     }

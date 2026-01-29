@@ -6,6 +6,7 @@
         v-for="(note, index) in strings"
         :key="index"
         class="string-control"
+        :class="{ 'playing': playingString === index }"
       >
         <span class="string-number">{{ strings.length - index }}</span>
 
@@ -20,14 +21,18 @@
         </select>
 
         <button
+          v-if="playingString !== index"
           class="play-button"
-          @mousedown="$emit('play', index)"
-          @mouseup="handleStop"
-          @mouseleave="handleStop"
-          @touchstart.prevent="$emit('play', index)"
-          @touchend.prevent="handleStop"
+          @click="$emit('play', index)"
         >
           ▶
+        </button>
+        <button
+          v-else
+          class="stop-button"
+          @click="$emit('stop', index)"
+        >
+          ■
         </button>
       </div>
     </div>
@@ -47,6 +52,10 @@ const props = defineProps({
   instrument: {
     type: String,
     required: true
+  },
+  playingString: {
+    type: Number,
+    default: null
   }
 })
 
@@ -61,11 +70,11 @@ const availableNotes = [
   'C5', 'C#5', 'D5', 'D#5', 'E5', 'F5', 'F#5', 'G5', 'G#5', 'A5', 'A#5', 'B5'
 ]
 
-function handleStop() {
-  if (props.playbackMode === 'continuous') {
-    emit('stop')
-  }
-}
+// function handleStop() {
+//   if (props.playbackMode === 'continuous') {
+//     emit('stop')
+//   }
+// }
 </script>
 
 <style scoped>
@@ -88,6 +97,11 @@ function handleStop() {
 
 .string-control:hover {
   background: rgba(255,255,255,0.15);
+}
+
+.string-control .playing {
+  background: rgba(66, 153, 225, 0.3);
+  border: 2px solid rgba(66, 153, 225, 0.6);
 }
 
 .string-number {
@@ -116,10 +130,10 @@ function handleStop() {
   color: white;
 }
 
-.play-button {
+.play-button,
+.stop-button {
   width: 60px;
   height: 60px;
-  background: rgba(76, 175, 80, 0.7);
   border: none;
   border-radius: 50%;
   color: white;
@@ -132,11 +146,24 @@ function handleStop() {
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+.play-button {
+  background: rgba(76, 175, 80, 0.7);
+}
+
 .play-button:hover {
   background: rgba(76, 175, 80, 0.9);
 }
 
-.play-button:active {
+.stop-button {
+  background: rgba(239, 68, 68, 0.7);
+}
+
+.stop-button:hover {
+  background: rgba(239, 68, 68, 0.9);
+}
+
+.play-button:active,
+.stop-button:active {
   transform: scale(0.95);
 }
 
