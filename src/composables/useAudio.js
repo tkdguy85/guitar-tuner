@@ -7,6 +7,22 @@ export function useAudio() {
   const repeatInterval = ref(null)
   const sampleCache = ref({})
 
+  // Master Volume Controls
+  const masterVolume = ref(0.5) // Default volume level
+  const masterGainNode = audioContext.createGain()
+  masterGainNode.connect(audioContext.destination)
+  masterGainNode.gain.value = masterVolume.value
+  
+  // Saved volume
+  const savedVolume = localStorage.getItem('tuner-volume')
+  if (savedVolume !== null) {
+    const volume = parseFloat(savedVolume)
+    if (!isNaN(volume) && volume >= 0 && volume <= 1) {
+      masterVolume.value = volume
+      masterGainNode.gain.value = volume
+    }
+  }
+
   const noteMap = {
     'C': 0, 'C#': 1, 'Db': 1, 'D': 2, 'D#': 3, 'Eb': 3,
     'E': 4, 'F': 5, 'F#': 6, 'Gb': 6, 'G': 7, 'G#': 8,
@@ -203,5 +219,16 @@ export function useAudio() {
     }
   }
 
-  return { playNote, stopNote }
+  function setVolume(volume) {
+    const volumeRange = Math.max(0, Math.min(1, volume))
+    masterVolume.value = volumeRange
+    masterGainNode.gain.value = volumeRange
+    localStorage.setItem('tuner-volume', volumeRange.toString())
+  }
+
+  function getVolume() {
+    return masterVolume.value
+  }
+
+  return { playNote, stopNote, setVolume, getVolume, volume: masterVolume }
 }
