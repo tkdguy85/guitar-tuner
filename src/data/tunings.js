@@ -61,13 +61,22 @@ export const STANDARD_TUNINGS = {
     }
   },
   'pure-tone': {
-    '6-string': {
+    'ukelele': {
+      'standard': ['G3', 'C3', 'E3', 'A3'],
+    },
+    '4-string bass': {
+      'standard': ['E1', 'A1', 'D2', 'G2'],
+    },
+    '5-string bass': {
+      'standard': ['B0', 'E1', 'A1', 'D2', 'G2'],
+    },
+    '6-string guitar': {
       'standard': ['E2', 'A2', 'D3', 'G3', 'B3', 'E4']
     },
-    '7-string': {
+    '7-string guitar': {
       'standard': ['B1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4']
     },
-    '8-string': {
+    '8-string guitar': {
       'standard': ['F#1', 'B1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4']
     }
   }
