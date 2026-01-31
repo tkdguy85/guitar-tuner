@@ -112,7 +112,7 @@ export function useAudio() {
     osc.type = 'sine'
     osc.frequency.setValueAtTime(noteToFrequency(note), audioContext.currentTime)
     osc.connect(gain)
-    gain.connect(audioContext.destination)
+    gain.connect(masterGainNode)
 
     return { osc, gain }
   }
@@ -134,7 +134,7 @@ export function useAudio() {
     source.playbackRate.value = targetFreq / sampleFreq
 
     source.connect(gain)
-    gain.connect(audioContext.destination)
+    gain.connect(masterGainNode)
 
     const now = audioContext.currentTime
     gain.gain.setValueAtTime(0.5, now)
@@ -173,7 +173,7 @@ export function useAudio() {
       const now = audioContext.currentTime
 
       gain.gain.setValueAtTime(0, now)
-      gain.gain.linearRampToValueAtTime(0.3, now + 0.05)
+      gain.gain.linearRampToValueAtTime(0.5, now + 0.05)
 
       osc.start()
 

@@ -32,6 +32,13 @@
       </section>
 
       <section>
+        <VolumeControl
+          v-model="volumeLevel"
+          @update:model-value="handleVolumeChange"
+        />
+      </section>
+      
+      <section>
         <StringDisplay
           :strings="currentStrings"
           :playback-mode="playbackMode"
@@ -60,6 +67,7 @@ import { ref, computed, watch } from 'vue'
 import InstrumentSelector from './components/InstrumentSelector.vue'
 import TuningSelector from './components/TuningSelect.vue'
 import PlaybackControls from './components/PlaybackControls.vue'
+import VolumeControl from './components/VolumeControl.vue'
 import StringDisplay from './components/StringDisplay.vue'
 import SaveTuningModal from './components/SaveTuningModal.vue'
 import { useAudio } from './composables/useAudio'
@@ -75,7 +83,7 @@ const currentStrings = ref(['E2', 'A2', 'D3', 'G3', 'B3', 'E4'])
 const playingString = ref(null)
 
 const { customTunings, saveCustomTuning: saveToStorage, deleteCustomTuning: deleteFromStorage } = useStorage()
-const { playNote, stopNote } = useAudio()
+const { playNote, stopNote, setVolume, getVolume } = useAudio()
 
 const availableStringCounts = computed(() => {
   return Object.keys(STANDARD_TUNINGS[currentInstrument.value] || {})
@@ -84,6 +92,8 @@ const availableStringCounts = computed(() => {
 const availableTunings = computed(() => {
   return STANDARD_TUNINGS[currentInstrument.value]?.[currentStringCount.value] || {}
 })
+
+const volumeLevel = ref(Math.round(getVolume() * 100))
 
 function handleInstrumentChange(instrument) {
   currentInstrument.value = instrument
@@ -164,6 +174,10 @@ function handleStop(index) {
 function handleStopAll() {
   stopNote()
   playingString.value = null
+}
+
+function handleVolumeChange(newVolume) {
+  setVolume(newVolume / 100)
 }
 
 watch([currentInstrument, currentStringCount], () => {
