@@ -35,13 +35,7 @@
 
 <style scoped>
 .instrument-selector {
-  margin-bottom: 25px;
-}
-
-h2 {
-  font-size: 1.3em;
-  margin-bottom: 15px;
-  text-align: center;
+  margin: 50px 0;
 }
 
 .instruments {

@@ -89,18 +89,17 @@ function toggleMute() {
 
 <style scoped>
 .volume-control {
-  padding: 1rem;
-  background: #f5f5f5;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  max-width: 400px;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 
 .volume-header {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .mute-button {
@@ -113,7 +112,7 @@ function toggleMute() {
   justify-content: center;
   border-radius: 4px;
   transition: background-color 0.2s;
-  color: #333;
+  color: #999;
 }
 
 .mute-button:hover {
@@ -127,7 +126,7 @@ function toggleMute() {
 .volume-label {
   font-weight: 600;
   font-size: 0.95rem;
-  color: #333;
+  color: #999;
 }
 
 .slider-container {
@@ -139,7 +138,7 @@ function toggleMute() {
 .volume-slider {
   flex: 1;
   height: 6px;
-  border-radius: 3px;
+  border-radius: 5px;
   background: #ddd;
   outline: none;
   -webkit-appearance: none;
@@ -195,7 +194,7 @@ function toggleMute() {
 .volume-value {
   font-weight: 600;
   font-size: 0.9rem;
-  color: #666;
+  color: #999;
   min-width: 45px;
   text-align: right;
 }

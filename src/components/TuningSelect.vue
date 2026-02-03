@@ -108,13 +108,13 @@ function handleDelete() {
 
 <style scoped>
 .tuning-selector {
-  margin-bottom: 25px;
+  margin: 50px 0;
 }
 
 .string-count-selector {
   display: flex;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   flex-wrap: wrap;
   justify-content: center;
 }

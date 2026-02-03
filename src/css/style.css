@@ -11,6 +11,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* TODO - Set up universal Color Vars */
+  --background: #242424;
+  --primary-text: #fff;
+  --primary-button: rgba(76, 175, 80, 0.7);
+  --primary-button-hover: rgba(76, 175, 80, 0.9);
 }
 
 a {
