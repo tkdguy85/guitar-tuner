@@ -11,11 +11,16 @@ Prompted Claude to build out two different layouts: a full stack project with a 
 
 This project is the VueJS FE only version. Grabbed the files that Claude was generating and started wiring them together and at first it looked like it was just going to need some FE tweaking and maybe updates to the sound files, but below, I'm going to add and strikeout the task that need to be concluded before I deem this a success. Maybe, I'll even gut this README and just add it to a separate about page as a lesson of sorts.
 
-TODOS:
+## Shout Out
 
-- Fix/import better sound bytes (current tones are awful)
-- Fix the looping features
-- Adjust the layout so the string order feels more intuitive
+I just want to leave a link to the MIDI.js library that's hosting all of these sound bites. Check out Gleiztz's docs at [MIDI.js Soundfonts](https://gleitz.github.io/midi-js-soundfonts/) or their [GitHub](https://github.com/gleitz).
+
+
+### TODOS
+
+- ~~Fix/import better sound bytes (current tones are awful)~~
+- ~~Fix the looping features~~
+- ~~Adjust the layout so the string order feels more intuitive~~
 - Update text language all over the site
 - Update how the saving works for custom layouts
 - Maybe use some of the dead space on the side for quick links to other tunings
