@@ -13,8 +13,7 @@ This project is the VueJS FE only version. Grabbed the files that Claude was gen
 
 ## Shout Out
 
-I just want to leave a link to the MIDI.js library that's hosting all of these sound bites. Check out Gleiztz's docs at [MIDI.js Soundfonts](https://gleitz.github.io/midi-js-soundfonts/) or their [GitHub](https://github.com/gleitz).
-
+I just want to leave a link to the MIDI.js library that's hosting all of these sound bites. Check out Gleitz's docs at [MIDI.js Soundfonts](https://gleitz.github.io/midi-js-soundfonts/) or their [GitHub](https://github.com/gleitz).
 
 ### TODOS
 
