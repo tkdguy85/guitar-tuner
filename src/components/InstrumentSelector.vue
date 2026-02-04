@@ -49,7 +49,7 @@
   background: rgba(255,255,255,0.2);
   border: 2px solid rgba(255,255,255,0.3);
   border-radius: 10px;
-  color: white;
+  color: --primary-text;
   font-size: 1em;
   cursor: pointer;
   transition: all 0.3s;
@@ -62,7 +62,7 @@
 
 .instrument-btn.active {
   background: rgba(255,255,255,0.4);
-  border-color: white;
+  border-color: --primary-text;
   box-shadow: 0 0 20px rgba(255,255,255,0.3);
 }
 

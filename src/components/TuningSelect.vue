@@ -124,14 +124,14 @@ function handleDelete() {
   background: rgba(255,255,255,0.2);
   border: 2px solid rgba(255,255,255,0.3);
   border-radius: 8px;
-  color: white;
+  color: --primary-text;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .string-count-btn.active {
   background: rgba(255,255,255,0.4);
-  border-color: white;
+  border-color: --primary-text;
 }
 
 .tuning-controls {
@@ -146,14 +146,14 @@ select {
   background: rgba(255,255,255,0.2);
   border: 2px solid rgba(255,255,255,0.3);
   border-radius: 8px;
-  color: white;
+  color: --primary-text;
   font-size: 1em;
   cursor: pointer;
 }
 
 select option {
   background: #667eea;
-  color: white;
+  color: --primary-text;
 }
 
 .save-btn,
@@ -162,9 +162,9 @@ select option {
   background: rgba(76, 175, 80, 0.7);
   border: 2px solid rgba(255,255,255,0.3);
   border-radius: 8px;
-  color: white;
+  color: --primary-text;
   cursor: pointer;
-  white-space: nowrap;
+  --primary-text-space: nowrap;
   transition: all 0.3s;
 }
 

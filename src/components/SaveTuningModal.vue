@@ -67,7 +67,7 @@ onMounted(() => {
 .modal-content h3 {
   margin-bottom: 20px;
   text-align: center;
-  color: white;
+  color: --primary-text;
 }
 
 .modal-content input {
@@ -77,7 +77,7 @@ onMounted(() => {
   background: rgba(255,255,255,0.2);
   border: 2px solid rgba(255,255,255,0.3);
   border-radius: 8px;
-  color: white;
+  color: --primary-text;
   font-size: 1em;
 }
 
@@ -96,7 +96,7 @@ onMounted(() => {
   background: rgba(255,255,255,0.2);
   border: 2px solid rgba(255,255,255,0.3);
   border-radius: 8px;
-  color: white;
+  color: --primary-text;
   cursor: pointer;
   transition: all 0.3s;
 }

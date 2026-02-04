@@ -114,14 +114,14 @@ const availableNotes = [
   background: rgba(255,255,255,0.2);
   border: 2px solid rgba(255,255,255,0.3);
   border-radius: 8px;
-  color: white;
+  color: --primary-text;
   font-size: 1.1em;
   cursor: pointer;
 }
 
 .note-selector option {
   background: #667eea;
-  color: white;
+  color: --primary-text;
 }
 
 .play-button,
@@ -130,7 +130,7 @@ const availableNotes = [
   height: 60px;
   border: none;
   border-radius: 50%;
-  color: white;
+  color: --primary-text;
   font-size: 1.5em;
   cursor: pointer;
   display: flex;
