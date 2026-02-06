@@ -151,13 +151,13 @@ function toggleMute() {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #4a90e2;
+  background: var(--primary-powder-blue);
   cursor: pointer;
   transition: background-color 0.2s, transform 0.2s;
 }
 
 .volume-slider::-webkit-slider-thumb:hover {
-  background: #357abd;
+  background: var(--primary-powder-blue);
   transform: scale(1.1);
 }
 
@@ -165,14 +165,14 @@ function toggleMute() {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #4a90e2;
+  background: var(--primary-powder-blue);
   cursor: pointer;
   border: none;
   transition: background-color 0.2s, transform 0.2s;
 }
 
 .volume-slider::-moz-range-thumb:hover {
-  background: #357abd;
+  background: var(--primary-powder-blue);
   transform: scale(1.1);
 }
 
