@@ -90,7 +90,7 @@ const availableNotes = [
 }
 
 .string-control:hover {
-  background: var(--primary-slate)5);
+  background: var(--primary-slate);
 }
 
 .string-control .playing {
@@ -130,7 +130,7 @@ const availableNotes = [
   height: 60px;
   border: none;
   border-radius: 50%;
-  color:var(--primary-text);
+  color: var(--primary-text);
   font-size: 1.5em;
   cursor: pointer;
   display: flex;

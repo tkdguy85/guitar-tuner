@@ -49,7 +49,7 @@
   background: var(--primary-slate);
   border: 2px solid var(--primary-slate);
   border-radius: 10px;
-  color:var(--primary-text);
+  color: var(--primary-text);
   font-size: 1em;
   cursor: pointer;
   transition: all 0.3s;
@@ -62,7 +62,7 @@
 
 .instrument-btn.active {
   background: rgba(255,255,255,0.4);
-  border-color:var(--primary-text);
+  border-color: var(--primary-text);
   box-shadow: 0 0 20px var(--primary-slate);
 }
 

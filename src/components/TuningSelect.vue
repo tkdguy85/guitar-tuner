@@ -131,7 +131,7 @@ function handleDelete() {
 
 .string-count-btn.active {
   background: rgba(255,255,255,0.4);
-  border-color:var(--primary-text);
+  border-color: var(--primary-text);
 }
 
 .tuning-controls {
@@ -146,14 +146,14 @@ select {
   background: var(--primary-slate);
   border: 2px solid var(--primary-slate);
   border-radius: 8px;
-  color:var(--primary-text);
+  color: var(--primary-text);
   font-size: 1em;
   cursor: pointer;
 }
 
 select option {
   background: #667eea;
-  color:var(--primary-text);
+  color: var(--primary-text);
 }
 
 .save-btn,
@@ -162,9 +162,9 @@ select option {
   background: rgba(76, 175, 80, 0.7);
   border: 2px solid var(--primary-slate);
   border-radius: 8px;
-  color:var(--primary-text);
+  color: var(--primary-text);
   cursor: pointer;
- var(--primary-text)-space: nowrap;
+  white-space: nowrap;
   transition: all 0.3s;
 }
 

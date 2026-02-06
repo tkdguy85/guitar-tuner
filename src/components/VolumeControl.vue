@@ -112,7 +112,7 @@ function toggleMute() {
   justify-content: center;
   border-radius: 4px;
   transition: background-color 0.2s;
-  color: --primary-grey;
+  color: var(--primary-grey);
 }
 
 .mute-button:hover {
@@ -126,7 +126,7 @@ function toggleMute() {
 .volume-label {
   font-weight: 600;
   font-size: 0.95rem;
-  color: --primary-grey;
+  color: var(--primary-grey);
 }
 
 .slider-container {
@@ -183,18 +183,18 @@ function toggleMute() {
 
 .volume-slider:disabled::-webkit-slider-thumb {
   cursor: not-allowed;
-  background: --primary-grey;
+  background: var(--primary-grey);
 }
 
 .volume-slider:disabled::-moz-range-thumb {
   cursor: not-allowed;
-  background: --primary-grey;
+  background: var(--primary-grey);
 }
 
 .volume-value {
   font-weight: 600;
   font-size: 0.9rem;
-  color: --primary-grey;
+  color: var(--primary-grey);
   min-width: 45px;
   text-align: right;
 }

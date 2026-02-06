@@ -67,7 +67,7 @@ onMounted(() => {
 .modal-content h3 {
   margin-bottom: 20px;
   text-align: center;
-  color:var(--primary-text);
+  color: var(--primary-text);
 }
 
 .modal-content input {
@@ -77,7 +77,7 @@ onMounted(() => {
   background: var(--primary-slate);
   border: 2px solid var(--primary-slate);
   border-radius: 8px;
-  color:var(--primary-text);
+  color: var(--primary-text);
   font-size: 1em;
 }
 
@@ -96,7 +96,7 @@ onMounted(() => {
   background: var(--primary-slate);
   border: 2px solid var(--primary-slate);
   border-radius: 8px;
-  color:var(--primary-text);
+  color: var(--primary-text);
   cursor: pointer;
   transition: all 0.3s;
 }
