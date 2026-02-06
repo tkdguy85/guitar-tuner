@@ -67,17 +67,17 @@ onMounted(() => {
 .modal-content h3 {
   margin-bottom: 20px;
   text-align: center;
-  color: --primary-text;
+  color:var(--primary-text);
 }
 
 .modal-content input {
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
-  background: rgba(255,255,255,0.2);
-  border: 2px solid rgba(255,255,255,0.3);
+  background: var(--primary-slate);
+  border: 2px solid var(--primary-slate);
   border-radius: 8px;
-  color: --primary-text;
+  color:var(--primary-text);
   font-size: 1em;
 }
 
@@ -93,10 +93,10 @@ onMounted(() => {
 .modal-actions button {
   flex: 1;
   padding: 12px;
-  background: rgba(255,255,255,0.2);
-  border: 2px solid rgba(255,255,255,0.3);
+  background: var(--primary-slate);
+  border: 2px solid var(--primary-slate);
   border-radius: 8px;
-  color: --primary-text;
+  color:var(--primary-text);
   cursor: pointer;
   transition: all 0.3s;
 }

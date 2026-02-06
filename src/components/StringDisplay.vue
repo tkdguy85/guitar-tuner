@@ -83,14 +83,14 @@ const availableNotes = [
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  background: rgba(255,255,255,0.1);
+  background: var(--primary-slate);
   padding: 15px;
   border-radius: 12px;
   transition: all 0.3s;
 }
 
 .string-control:hover {
-  background: rgba(255,255,255,0.15);
+  background: var(--primary-slate)5);
 }
 
 .string-control .playing {
@@ -103,7 +103,7 @@ const availableNotes = [
   font-weight: bold;
   min-width: 50px;
   text-align: center;
-  background: rgba(255,255,255,0.2);
+  background: var(--primary-slate);
   padding: 8px;
   border-radius: 8px;
 }
@@ -111,17 +111,17 @@ const availableNotes = [
 .note-selector {
   flex: 1;
   padding: 10px 5px;
-  background: rgba(255,255,255,0.2);
-  border: 2px solid rgba(255,255,255,0.3);
+  background: var(--primary-slate);
+  border: 2px solid var(--primary-slate);
   border-radius: 8px;
-  color: --primary-text;
+  color:var(--primary-text);
   font-size: 1.1em;
   cursor: pointer;
 }
 
 .note-selector option {
   background: #667eea;
-  color: --primary-text;
+  color:var(--primary-text);
 }
 
 .play-button,
@@ -130,7 +130,7 @@ const availableNotes = [
   height: 60px;
   border: none;
   border-radius: 50%;
-  color: --primary-text;
+  color:var(--primary-text);
   font-size: 1.5em;
   cursor: pointer;
   display: flex;

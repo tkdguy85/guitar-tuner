@@ -121,17 +121,17 @@ function handleDelete() {
 
 .string-count-btn {
   padding: 10px 20px;
-  background: rgba(255,255,255,0.2);
-  border: 2px solid rgba(255,255,255,0.3);
+  background: var(--primary-slate);
+  border: 2px solid var(--primary-slate);
   border-radius: 8px;
-  color: --primary-text;
+  color:var(--primary-text);
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .string-count-btn.active {
   background: rgba(255,255,255,0.4);
-  border-color: --primary-text;
+  border-color:var(--primary-text);
 }
 
 .tuning-controls {
@@ -143,28 +143,28 @@ function handleDelete() {
 select {
   flex: 1;
   padding: 12px;
-  background: rgba(255,255,255,0.2);
-  border: 2px solid rgba(255,255,255,0.3);
+  background: var(--primary-slate);
+  border: 2px solid var(--primary-slate);
   border-radius: 8px;
-  color: --primary-text;
+  color:var(--primary-text);
   font-size: 1em;
   cursor: pointer;
 }
 
 select option {
   background: #667eea;
-  color: --primary-text;
+  color:var(--primary-text);
 }
 
 .save-btn,
 .delete-btn {
   padding: 12px 20px;
   background: rgba(76, 175, 80, 0.7);
-  border: 2px solid rgba(255,255,255,0.3);
+  border: 2px solid var(--primary-slate);
   border-radius: 8px;
-  color: --primary-text;
+  color:var(--primary-text);
   cursor: pointer;
-  --primary-text-space: nowrap;
+ var(--primary-text)-space: nowrap;
   transition: all 0.3s;
 }
 

@@ -38,7 +38,7 @@ defineEmits(['update:modelValue'])
   justify-content: center;
   gap: 30px;
   padding: 15px;
-  background: rgba(255,255,255,0.1);
+  background: var(--primary-slate);
   border-radius: 10px;
 }
 

@@ -46,24 +46,24 @@
 
 .instrument-btn {
   padding: 15px;
-  background: rgba(255,255,255,0.2);
-  border: 2px solid rgba(255,255,255,0.3);
+  background: var(--primary-slate);
+  border: 2px solid var(--primary-slate);
   border-radius: 10px;
-  color: --primary-text;
+  color:var(--primary-text);
   font-size: 1em;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .instrument-btn:hover {
-  background: rgba(255,255,255,0.3);
+  background: var(--primary-slate);
   transform: translateY(-2px);
 }
 
 .instrument-btn.active {
   background: rgba(255,255,255,0.4);
-  border-color: --primary-text;
-  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  border-color:var(--primary-text);
+  box-shadow: 0 0 20px var(--primary-slate);
 }
 
 @media (max-width: 768px) {
