@@ -7,7 +7,7 @@
         :checked="modelValue === 'repeat'"
         @change="$emit('update:modelValue', 'repeat')"
       />
-      Repeat (3.5s intervals)
+      Short Repeat
     </label>
     <label>
       <input
@@ -16,7 +16,7 @@
         :checked="modelValue === 'continuous'"
         @change="$emit('update:modelValue', 'continuous')"
       />
-      Continuous
+      Longer/Continuous
     </label>
   </div>
 </template>
