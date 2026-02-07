@@ -8,7 +8,7 @@ export function useAudio() {
   const sampleCache = ref({})
 
   // Master Volume Controls
-  const masterVolume = ref(0.5) // Default volume level
+  const masterVolume = ref(0.8) // Default volume level
   const masterGainNode = audioContext.createGain()
   masterGainNode.connect(audioContext.destination)
   masterGainNode.gain.value = masterVolume.value
@@ -137,7 +137,7 @@ export function useAudio() {
     gain.connect(masterGainNode)
 
     const now = audioContext.currentTime
-    gain.gain.setValueAtTime(0.5, now)
+    gain.gain.setValueAtTime(5.0, now)
     
     if (duration) {
       gain.gain.exponentialRampToValueAtTime(0.01, now + duration)
