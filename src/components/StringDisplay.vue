@@ -76,6 +76,7 @@ const availableNotes = [
   display: flex;
   flex-direction: row;
   gap: 15px;
+  justify-content: center;
 }
 
 .string-control {
