@@ -15,9 +15,9 @@ export const STANDARD_TUNINGS = {
       'standard': ['B0', 'E1', 'A1', 'D2', 'G2', 'C3'],
       'drop-a': ['A0', 'E1', 'A1', 'D2', 'G2', 'C3']
     },
-    '7-string': {
-      'standard': ['F#0', 'B0', 'E1', 'A1', 'D2', 'G2', 'C3']
-    }
+    // '7-string': {
+    //   'standard': ['F#0', 'B0', 'E1', 'A1', 'D2', 'G2', 'C3']
+    // }
   },
   'electric-guitar': {
     '6-string': {
@@ -35,7 +35,8 @@ export const STANDARD_TUNINGS = {
     '7-string': {
       'standard': ['B1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4'],
       'drop-a': ['A1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4'],
-      'half-step-down': ['Bb1', 'Eb2', 'Ab2', 'Db3', 'Gb3', 'Bb3', 'Eb4']
+      'half-step-down': ['Bb1', 'Eb2', 'Ab2', 'Db3', 'Gb3', 'Bb3', 'Eb4'],
+      'whole-step-down': ['A1', 'D2', 'G2', 'C3', 'F3', 'A3', 'D4'],
     },
     '8-string': {
       'standard': ['F#1', 'B1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4'],
@@ -47,18 +48,18 @@ export const STANDARD_TUNINGS = {
       'standard': ['E2', 'A2', 'D3', 'G3', 'B3', 'E4'],
       'drop-d': ['D2', 'A2', 'D3', 'G3', 'B3', 'E4'],
       'half-step-down': ['Eb2', 'Ab2', 'Db3', 'Gb3', 'Bb3', 'Eb4'],
-      'open-d': ['D2', 'A2', 'D3', 'F#3', 'A3', 'D4'],
-      'open-g': ['D2', 'G2', 'D3', 'G3', 'B3', 'D4'],
       'DADGAD': ['D2', 'A2', 'D3', 'G3', 'A3', 'D4'],
       'open-c': ['C2', 'G2', 'C3', 'G3', 'C4', 'E4'],
-      'open-e': ['E2', 'B2', 'E3', 'G#3', 'B3', 'E4']
+      'open-d': ['D2', 'A2', 'D3', 'F#3', 'A3', 'D4'],
+      'open-e': ['E2', 'B2', 'E3', 'G#3', 'B3', 'E4'],
+      'open-g': ['D2', 'G2', 'D3', 'G3', 'B3', 'D4']
     },
-    '7-string': {
-      'standard': ['B1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4']
-    },
-    '8-string': {
-      'standard': ['F#1', 'B1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4']
-    }
+    // '7-string': {
+    //   'standard': ['B1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4']
+    // },
+    // '8-string': {
+    //   'standard': ['F#1', 'B1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4']
+    // }
   },
   'pure-tone': {
     'ukelele': {
@@ -73,11 +74,11 @@ export const STANDARD_TUNINGS = {
     '6-string guitar': {
       'standard': ['E2', 'A2', 'D3', 'G3', 'B3', 'E4']
     },
-    '7-string guitar': {
-      'standard': ['B1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4']
-    },
-    '8-string guitar': {
-      'standard': ['F#1', 'B1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4']
-    }
+    // '7-string guitar': {
+    //   'standard': ['B1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4']
+    // },
+    // '8-string guitar': {
+    //   'standard': ['F#1', 'B1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4']
+    // }
   }
 }
