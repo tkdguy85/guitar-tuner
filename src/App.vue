@@ -4,7 +4,7 @@
       <h1>Guitar Tuner</h1>
       <p>Project by me <a href="https://www.linkedin.com/in/tkdguy85/">Dallas III</a></p>
       <p>Peep the repo <a href="https://github.com/tkdguy85/guitar-tuner">here</a></p>
-      <p>Check out the "Why I built this" article on <a href="https://dev.to/">DevTo</a></p>
+      <p>Check out the "Why I built this" article on <a href="https://dev.to/tkdguy85/vibe-coding-a-guitar-tuner-7cn">DevTo</a></p>
       <p>Otherwise, enjoy it and if you want a better experience <br> you can just use either a real tuner or Fender's tuner <a href="https://www.fender.com/online-guitar-tuner/electric-guitar-tuning">here</a></p>
     </header>
 
