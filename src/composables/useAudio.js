@@ -163,7 +163,7 @@ export function useAudio() {
       osc.start()
       osc.stop(now + 2)
     } else {
-      await playSample(note, instrument, 2)
+      await playSample(note, instrument, 4)
     }
   }
 
@@ -193,7 +193,7 @@ export function useAudio() {
 
     if (playbackMode === 'repeat') {
       playOnce(note, instrument)
-      repeatInterval.value = setInterval(() => playOnce(note, instrument), 3500)
+      repeatInterval.value = setInterval(() => playOnce(note, instrument), 3000)
     } else {
       playContinuous(note, instrument)
     }
