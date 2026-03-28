@@ -85,6 +85,7 @@ const playbackMode = ref('repeat')
 const showSaveModal = ref(false)
 const currentStrings = ref(['E2', 'A2', 'D3', 'G3', 'B3', 'E4'])
 const playingString = ref(null)
+const playTimer = ref(null)
 
 const { customTunings, saveCustomTuning: saveToStorage, deleteCustomTuning: deleteFromStorage } = useStorage()
 const { playNote, stopNote, setVolume, getVolume } = useAudio()
@@ -136,6 +137,13 @@ function updateString(index, note) {
   currentStrings.value[index] = note
 }
 
+function clearPlayTimer() {
+  if (playTimer.value) {
+    clearTimeout(playTimer.value)
+    playTimer.value = null
+  }
+}
+
 function saveCustomTuning(name) {
   const tuning = {
     id: Date.now(),
@@ -162,14 +170,25 @@ function handlePlay(index) {
   if (playbackMode.value === 'continuous' && playingString.value !== null && playingString.value !== index) {
     stopNote()
   }
-  
+
+  clearPlayTimer()
   const note = currentStrings.value[index]
   playNote(note, currentInstrument.value, playbackMode.value)
   playingString.value = index
+
+  if (playbackMode.value === 'repeat') {
+    playTimer.value = setTimeout(() => {
+      if (playingString.value === index) {
+        playingString.value = null
+      }
+      playTimer.value = null
+    }, 2000)
+  }
 }
 
 function handleStop(index) {
   stopNote()
+  clearPlayTimer()
   if (playingString.value === index) {
     playingString.value = null
   }
@@ -177,6 +196,7 @@ function handleStop(index) {
 
 function handleStopAll() {
   stopNote()
+  clearPlayTimer()
   playingString.value = null
 }
 

@@ -7,7 +7,7 @@
         :checked="modelValue === 'repeat'"
         @change="$emit('update:modelValue', 'repeat')"
       />
-      Short Repeat
+      Single Note
     </label>
     <label>
       <input
