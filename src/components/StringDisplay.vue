@@ -139,33 +139,25 @@ const availableNotes = [
   justify-content: center;
   transition: all 0.3s;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 .play-button {
   background: rgba(76, 175, 80, 0.7);
-}
 
-.play-button:hover {
-  background: rgba(76, 175, 80, 0.9);
+  &:hover {
+    background: rgba(76, 175, 80, 0.9);
+  }
 }
 
 .stop-button {
   background: rgba(239, 68, 68, 0.7);
-}
 
-.stop-button:hover {
-  background: rgba(239, 68, 68, 0.9);
-}
-
-.play-button:active,
-.stop-button:active {
-  transform: scale(0.95);
-}
-
-@media (max-width: 768px) {
-  .play-button {
-    width: 50px;
-    height: 50px;
+  &:hover {
+    background: rgba(239, 68, 68, 0.9);
   }
 }
 </style>
