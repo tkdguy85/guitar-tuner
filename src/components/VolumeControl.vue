@@ -113,15 +113,16 @@ function toggleMute() {
   border-radius: 4px;
   transition: background-color 0.2s;
   color: var(--primary-grey);
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+  
+  &:active {
+    background-color: #d0d0d0;
+  }
 }
 
-.mute-button:hover {
-  background-color: #e0e0e0;
-}
-
-.mute-button:active {
-  background-color: #d0d0d0;
-}
 
 .volume-label {
   font-weight: 600;
