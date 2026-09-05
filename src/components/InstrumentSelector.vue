@@ -53,18 +53,19 @@
   font-size: 1em;
   cursor: pointer;
   transition: all 0.3s;
+
+  &:hover {
+    background: var(--primary-slate);
+    transform: translateY(-2px);
+  }
+  
+  &.active {
+    background: rgba(255,255,255,0.4);
+    border-color: var(--primary-text);
+    box-shadow: 0 0 20px var(--primary-slate);
+  }
 }
 
-.instrument-btn:hover {
-  background: var(--primary-slate);
-  transform: translateY(-2px);
-}
-
-.instrument-btn.active {
-  background: rgba(255,255,255,0.4);
-  border-color: var(--primary-text);
-  box-shadow: 0 0 20px var(--primary-slate);
-}
 
 @media (max-width: 768px) {
   .instruments {

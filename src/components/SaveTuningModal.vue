@@ -62,51 +62,52 @@ onMounted(() => {
   border-radius: 15px;
   min-width: 300px;
   max-width: 90%;
-}
 
-.modal-content h3 {
-  margin-bottom: 20px;
-  text-align: center;
-  color: var(--primary-text);
-}
+  h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--primary-text);
+  }
 
-.modal-content input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  background: var(--primary-slate);
-  border: 2px solid var(--primary-slate);
-  border-radius: 8px;
-  color: var(--primary-text);
-  font-size: 1em;
-}
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background: var(--primary-slate);
+    border: 2px solid var(--primary-slate);
+    border-radius: 8px;
+    color: var(--primary-text);
+    font-size: 1em;
 
-.modal-content input::placeholder {
-  color: rgba(255,255,255,0.6);
+    &::placeholder {
+      color: rgba(255,255,255,0.6);
+    }
+  }
+
 }
 
 .modal-actions {
   display: flex;
   gap: 10px;
-}
 
-.modal-actions button {
-  flex: 1;
-  padding: 12px;
-  background: var(--primary-slate);
-  border: 2px solid var(--primary-slate);
-  border-radius: 8px;
-  color: var(--primary-text);
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.modal-actions button:first-child {
-  background: rgba(76, 175, 80, 0.7);
-}
-
-.modal-actions button:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
+  button {
+    flex: 1;
+    padding: 12px;
+    background: var(--primary-slate);
+    border: 2px solid var(--primary-slate);
+    border-radius: 8px;
+    color: var(--primary-text);
+    cursor: pointer;
+    transition: all 0.3s;
+    
+    &:first-child {
+      background: rgba(76, 175, 80, 0.7);
+    }
+    
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+  }
 }
 </style>
