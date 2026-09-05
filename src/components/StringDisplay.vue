@@ -88,10 +88,10 @@ const availableNotes = [
   padding: 15px;
   border-radius: 12px;
   transition: all 0.3s;
-}
 
-.string-control:hover {
-  background: var(--primary-slate);
+  &:hover {
+    background: var(--primary-slate);
+  }
 }
 
 .string-control .playing {
@@ -118,11 +118,11 @@ const availableNotes = [
   color:var(--primary-text);
   font-size: 1.1em;
   cursor: pointer;
-}
 
-.note-selector option {
-  background: #667eea;
-  color:var(--primary-text);
+  option {
+    background: #667eea;
+    color:var(--primary-text);
+  }
 }
 
 .play-button,
