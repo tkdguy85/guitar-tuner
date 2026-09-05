@@ -3,9 +3,9 @@
   --background: #09120a;
   --primary-text: #fff;
   --primary-grey: #999;
-  --primary-border: #646cff;
+  --primary-border: #67d3ec;
   --primary-border-hover: #535bf2;
-  --primary-powder-blue: #357abd;
+  --primary-powder-blue: #087bed;
   --primary-slate: rgba(255, 255, 255, 0.1);
   --primary-button: rgba(76, 175, 80, 0.7);
   --primary-button-hover: rgba(76, 175, 80, 0.9);
@@ -29,9 +29,10 @@ a {
   font-weight: 500;
   color: var(--primary-border);
   text-decoration: inherit;
-}
-a:hover {
-  color: var(--primary-border-hover);
+  
+  &:hover {
+    color: var(--primary-border-hover);
+  }
 }
 
 body {
@@ -57,13 +58,15 @@ button {
   background-color: var(--background);
   cursor: pointer;
   transition: border-color 0.25s;
-}
-button:hover {
-  border-color: var(--primary-border);
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+  &:hover {
+    border-color: var(--primary-border);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
 }
 
 .card {
@@ -82,9 +85,11 @@ button:focus-visible {
     color: var(--primary-slate);
     background-color: var(--primary-text);
   }
+
   a:hover {
     color: var(--primary-border-hover);
   }
+
   button {
     background-color: var(--primary-text);
   }
