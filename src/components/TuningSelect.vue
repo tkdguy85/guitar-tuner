@@ -127,12 +127,13 @@ function handleDelete() {
   color:var(--primary-text);
   cursor: pointer;
   transition: all 0.3s;
+
+  &:active {
+    background: rgba(255,255,255,0.4);
+    border-color: var(--primary-text);
+  }
 }
 
-.string-count-btn.active {
-  background: rgba(255,255,255,0.4);
-  border-color: var(--primary-text);
-}
 
 .tuning-controls {
   display: flex;
@@ -149,11 +150,11 @@ select {
   color: var(--primary-text);
   font-size: 1em;
   cursor: pointer;
-}
-
-select option {
-  background: #667eea;
-  color: var(--primary-text);
+  
+  option {
+    background: #667eea;
+    color: var(--primary-text);
+  }
 }
 
 .save-btn,
@@ -170,15 +171,16 @@ select option {
 
 .delete-btn {
   background: rgba(244, 67, 54, 0.7);
+
+  &:hover {
+    background: rgba(244, 67, 54, 0.9);
+  }
 }
 
 .save-btn:hover {
   background: rgba(76, 175, 80, 0.9);
 }
 
-.delete-btn:hover {
-  background: rgba(244, 67, 54, 0.9);
-}
 
 @media (max-width: 768px) {
   .tuning-controls {
