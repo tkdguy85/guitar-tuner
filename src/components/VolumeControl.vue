@@ -154,11 +154,11 @@ function toggleMute() {
   border-radius: 50%;
   background: var(--primary-powder-blue);
   cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
+  transition: background-color 0.2s, transform 0.4s;
 }
 
 .volume-slider::-webkit-slider-thumb:hover {
-  background: var(--primary-powder-blue);
+  background: var(--primary-powder-blue-hover);
   transform: scale(1.1);
 }
 
@@ -169,11 +169,11 @@ function toggleMute() {
   background: var(--primary-powder-blue);
   cursor: pointer;
   border: none;
-  transition: background-color 0.2s, transform 0.2s;
+  transition: background-color 0.2s, transform 0.4s;
 }
 
 .volume-slider::-moz-range-thumb:hover {
-  background: var(--primary-powder-blue);
+  background: var(--primary-powder-blue-hover);
   transform: scale(1.1);
 }
 
