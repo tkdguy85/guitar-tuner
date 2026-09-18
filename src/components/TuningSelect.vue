@@ -159,7 +159,7 @@ select {
 
 .save-btn,
 .delete-btn {
-  padding: 12px 20px;
+  padding: 9px 20px;
   background: rgba(76, 175, 80, 0.7);
   border: 2px solid var(--primary-slate);
   border-radius: 8px;

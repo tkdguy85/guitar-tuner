@@ -57,7 +57,7 @@
   }
 
   .modal-content {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(45deg, #667eea 0%, #4b0194 100%);
     padding: 30px;
     border-radius: 15px;
     min-width: 300px;
@@ -70,7 +70,7 @@
     }
 
     input {
-      width: 100%;
+      width: 90%;
       padding: 12px;
       margin-bottom: 20px;
       background: var(--primary-slate);
