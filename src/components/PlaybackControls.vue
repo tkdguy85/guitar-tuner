@@ -30,9 +30,9 @@
   })
 
   defineEmits(['update:modelValue'])
-  </script>
+</script>
 
-  <style scoped>
+<style scoped>
   .playback-controls {
     display: flex;
     justify-content: center;
