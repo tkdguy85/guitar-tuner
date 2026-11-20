@@ -16,7 +16,7 @@
         :checked="modelValue === 'continuous'"
         @change="$emit('update:modelValue', 'continuous')"
       />
-      Longer/Continuous
+      Looping Note
     </label>
   </div>
 </template>
@@ -54,12 +54,5 @@
     width: 18px;
     height: 18px;
     cursor: pointer;
-  }
-
-  @media (max-width: 768px) {
-    .playback-controls {
-      flex-direction: column;
-      gap: 15px;
-    }
   }
 </style>
