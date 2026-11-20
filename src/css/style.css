@@ -1,5 +1,4 @@
 :root {
-  /* TODO - Set up universal Color Vars */
   --background: #09120a;
   --primary-text: #fff;
   --primary-grey: #999;
@@ -23,7 +22,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 a {
@@ -41,7 +39,6 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
