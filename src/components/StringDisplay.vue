@@ -74,6 +74,7 @@ const availableNotes = [
 <style scoped>
 .strings-container {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
   gap: 15px;
   justify-content: center;
@@ -82,6 +83,7 @@ const availableNotes = [
 .string-control {
   display: flex;
   flex-direction: column;
+  flex: 1 1 0;
   align-items: center;
   gap: 30px;
   background: var(--primary-slate);
