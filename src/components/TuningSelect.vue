@@ -180,17 +180,4 @@ select {
 .save-btn:hover {
   background: rgba(76, 175, 80, 0.9);
 }
-
-
-@media (max-width: 768px) {
-  .tuning-controls {
-    flex-direction: column;
-  }
-
-  select,
-  .save-btn,
-  .delete-btn {
-    width: 100%;
-  }
-}
 </style>
