@@ -8,7 +8,12 @@
         class="string-control"
         :class="{ 'playing': playingString === index }"
       >
-        <span class="string-number">{{ strings.length - index }}</span>
+        <span 
+          class="string-number"
+          :class="stringNumberColor(index)"
+        >
+          {{ strings.length - index }}
+        </span>
 
         <select
           :value="note"
@@ -40,6 +45,8 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+
 const props = defineProps({
   strings: {
     type: Array,
@@ -50,6 +57,10 @@ const props = defineProps({
     required: true
   },
   instrument: {
+    type: String,
+    required: true
+  },
+  currentTuning: {
     type: String,
     required: true
   },
@@ -69,11 +80,55 @@ const availableNotes = [
   'C4', 'C#4', 'D4', 'D#4', 'E4', 'F4', 'F#4', 'G4', 'G#4', 'A4', 'A#4', 'B4',
   'C5', 'C#5', 'D5', 'D#5', 'E5', 'F5', 'F#5', 'G5', 'G#5', 'A5', 'A#5', 'B5'
 ]
+
+// String Color Schemes (by string count)
+const BASS_SCHEMES = {
+  4: ['brass', 'red', 'black', 'green'],
+  5: ['purple', 'brass', 'red', 'black', 'green'],
+  6: ['purple', 'brass', 'red', 'black', 'green', 'silver']
+}
+
+const GUITAR_SCHEMES = {
+  6: ['brass', 'red', 'black', 'green', 'purple', 'silver'],
+  7: ['copper', 'brass', 'red', 'black', 'green', 'purple', 'silver'],
+  8: ['copper', 'purple', 'brass', 'red', 'black', 'green', 'purple', 'silver']
+}
+
+
+const SCHEMES = { bass: BASS_SCHEMES, guitar: GUITAR_SCHEMES }
+
+const instrumentType = computed(() => {
+  if (props.instrument === 'pure-tone') {
+    const label = props.currentTuning.toLowerCase()
+    
+    if (label.includes('bass')) return 'bass'
+    if (label.includes('guitar')) return 'guitar'
+
+    return null
+  }
+
+  if (props.instrument === 'bass') return 'bass'
+  if (props.instrument.endsWith('-guitar')) return 'guitar'
+  
+  return null
+})
+
+// Update on string/instrument change
+const colorScheme = computed(
+  () => SCHEMES[instrumentType.value]?.[props.strings.length] ?? null
+)
+
+function stringNumberColor(index) {
+  const color = colorScheme.value?.[index]
+  return color ? `string-number--${color}` : ''
+}
+
 </script>
 
 <style scoped>
 .strings-container {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
   gap: 15px;
   justify-content: center;
@@ -82,6 +137,7 @@ const availableNotes = [
 .string-control {
   display: flex;
   flex-direction: column;
+  flex: 1 1 0;
   align-items: center;
   gap: 30px;
   background: var(--primary-slate);
@@ -94,7 +150,7 @@ const availableNotes = [
   }
 }
 
-.string-control .playing {
+.string-control.playing {
   background: rgba(66, 153, 225, 0.3);
   border: 2px solid rgba(66, 153, 225, 0.6);
 }
@@ -107,6 +163,36 @@ const availableNotes = [
   background: var(--primary-slate);
   padding: 8px;
   border-radius: 8px;
+}
+
+/* String color guide */
+.string-number--green  { 
+  background: #2f855a; 
+}
+
+.string-number--black  { 
+  background: #222; 
+}
+
+.string-number--red    { 
+  background: #c53030; 
+}
+
+.string-number--brass  { 
+  background: #b7791f; 
+}
+
+.string-number--purple { 
+  background: #6b46c1; 
+}
+
+.string-number--silver { 
+  background: #a0aec0; 
+  color: #1a202c; 
+}
+
+.string-number--copper { 
+  background: #b45309; 
 }
 
 .note-selector {

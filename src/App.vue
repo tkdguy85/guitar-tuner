@@ -47,6 +47,7 @@
           :strings="currentStrings"
           :playback-mode="playbackMode"
           :instrument="currentInstrument"
+          :current-tuning="currentTuning"
           :playing-string="playingString"
           @update-string="updateString"
           @play="handlePlay"
