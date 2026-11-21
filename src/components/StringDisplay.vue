@@ -83,16 +83,17 @@ const availableNotes = [
 
 // String Color Schemes (by string count)
 const BASS_SCHEMES = {
-  4: ['green', 'black', 'red', 'brass'],
-  5: ['green', 'black', 'red', 'brass', 'purple'],
-  6: ['silver', 'green', 'black', 'red', 'brass', 'purple']
+  4: ['brass', 'red', 'black', 'green'],
+  5: ['purple', 'brass', 'red', 'black', 'green'],
+  6: ['purple', 'brass', 'red', 'black', 'green', 'silver']
 }
 
 const GUITAR_SCHEMES = {
-  6: ['silver', 'purple', 'green', 'black', 'red', 'brass'],
-  7: ['silver', 'purple', 'green', 'black', 'red', 'brass', 'silver'],
-  8: ['silver', 'purple', 'green', 'black', 'red', 'brass', 'purple', 'copper']
+  6: ['brass', 'red', 'black', 'green', 'purple', 'silver'],
+  7: ['copper', 'brass', 'red', 'black', 'green', 'purple', 'silver'],
+  8: ['copper', 'purple', 'brass', 'red', 'black', 'green', 'purple', 'silver']
 }
+
 
 const SCHEMES = { bass: BASS_SCHEMES, guitar: GUITAR_SCHEMES }
 
