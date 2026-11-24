@@ -1,6 +1,6 @@
 # Guitar Tuner Prototype
 
-To whom ever reads this, I want to preface this with stating I'm not entirely against AI built/AI assisted projects. I also don't want to set myself as leaning on either side of the AI-dooming rhetoric that's floating around these days. I still many of these technologies are still somewhat in their infancy, or better yet, their teething era, but far from ready to let loose.
+To whom ever reads this, I want to preface this with stating I'm not entirely against AI built/AI assisted projects. I also don't want to set myself as leaning on either side of the AI-dooming rhetoric that's floating around these days. Many of these technologies are still somewhat in their infancy, or better yet, their teething era, but far from ready to let loose.
 
 This project started because a guitar tuner that I liked using had lost its hosting license and that meant I'd have to move on to something else. I'm currently wrapped up in a couple of other builds and thought maybe this would be an interesting project to thought dump into Claude Code (on the free tier because I'm cheap and don't use it that much) and see how quickly this would spin something out. I'm sure better prompts and languages and other factors could've helped this come along a lot faster, but I think many folks using this either don't have that level of context or are in the same boat as I am and just curious to see what would happen.
 
@@ -15,7 +15,12 @@ This project is the VueJS FE only version. Grabbed the files that Claude was gen
 
 I just want to leave a link to the MIDI.js library that's hosting all of these sound bites. Check out Gleitz's docs at [MIDI.js Soundfonts](https://gleitz.github.io/midi-js-soundfonts/) or their [GitHub](https://github.com/gleitz).
 
-### TODOS
+## Additional Notes
+
+- **Nov 23, 2026:**
+Adding this section here as many months have past since this project was started. A cross between re-prompting and better instructions to Claude coupled with several moments where it was just easier to slap on some tunes, sit with ideas, and build/test features manually because, why not. I've never just been focused on pure speed and output. I enjoy getting stuck and trying to figure out something different. Since I've been using this tool whenever I'm working on my guitars, ideas pop in and out of my head all of the time, as well as a few suggestions for others who've used this. All that to say is...this section is probably just going to whatever was happening at the time.
+
+## TODOS
 
 - ~~Fix/import better sound bytes (current tones are awful)~~
 - ~~Fix the looping features~~
